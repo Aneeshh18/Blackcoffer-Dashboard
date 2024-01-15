@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.container .slice {
+  transition: filter 0.3s, opacity 0.3s;
+  filter: saturate(100%);
+  opacity: 1;
+  cursor: pointer;
+  color: #000; 
+}
+
+.container.hasHighlight .slice {
+  filter: saturate(50%);
+  opacity: 0.2;
+}
+
+.container.hasHighlight .slice:hover {
+  filter: saturate(100%);
+  opacity: 1;
+}
